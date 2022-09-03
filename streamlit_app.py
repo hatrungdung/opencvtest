@@ -32,17 +32,7 @@ def main_loop():
     if not image_file:
         return None
 
-    original_image = Image.open(image_file)
-    original_image = np.array(original_image)
-
-    processed_image = blur_image(original_image, blur_rate)
-    processed_image = brighten_image(processed_image, brightness_amount)
-
-    if apply_enhancement_filter:
-        processed_image = enhance_details(processed_image)
-
-    st.text("Original Image vs Processed Image")
-    st.image([original_image, processed_image])
+   
 
 
 if __name__ == '__main__':
